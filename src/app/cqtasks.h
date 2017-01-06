@@ -31,6 +31,7 @@ struct _cq_cron_cmd
 	int day;	//1-31
 	int month;	//1-12
 	int week;	//0-6
+	char *file; //file.sh
 };
 
 struct _cq_queues {
@@ -40,7 +41,11 @@ struct _cq_queues {
 	cq_queues    *next;
 };
 
+
 struct _cq_queue_cmd {
-	char *name;
-	
+	int type;
+};
+
+struct _cq_queue_cmd_port {
+	int type;
 };
